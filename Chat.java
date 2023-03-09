@@ -29,22 +29,26 @@ public class Chat {
                 nombresSeleccionados.add(nombreAleatorio);
             }
         }
-        
-        for (String nombre : nombresSeleccionados) {
-            System.out.println(nombre);
-        }
 
         for (int i = 0; i < nombres.size(); i++) {
-			String nombre = nombres.get(i);
+			Persona personaObj = new Persona();
+        	String nombre = nombres.get(i);
+        	personaObj.setNombre(nombre);
             String atributo1 = atributos.get(new Random().nextInt(atributos.size()));
+            personaObj.setAtributo1(atributo1);
             String atributo2 = atributos.get(new Random().nextInt(atributos.size()));
+            personaObj.setAtributo2(atributo2);
             String atributo3 = atributos.get(new Random().nextInt(atributos.size()));
+            personaObj.setAtributo3(atributo3);
             String atributo4 = atributos.get(new Random().nextInt(atributos.size()));
+            personaObj.setAtributo4(atributo4);
 
             
             if (i == 2 || i == 5) {
                 atributo1 = "Inteligente";
+            
             }
+            personas.add(personaObj);
             
         }
 
