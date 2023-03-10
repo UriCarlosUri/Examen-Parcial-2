@@ -121,7 +121,6 @@ public class Mian1 {
 	        
 	        int personaElegida = new Random().nextInt(10);
 	        
-	        //Menú que permite realizar 3 preguntas
 	        for (int contadorPreguntas = 0; contadorPreguntas < 3; contadorPreguntas++) {
 	            System.out.println("CUAL NO TIENE TU PERSONAJE ");
 	            System.out.println("1. ES ENANO??");
@@ -200,24 +199,22 @@ public class Mian1 {
 	                	    }
 	                	    break;
 	                	}
-	         // Aquí es donde debemos actualizar el número de personas elegidas después de cada pregunta.
 	            int numeroPersonasElegidas = 0;
 	            for (int i = 0; i < 10; i++) {
 	            if (persona[i] != null) {
 	            numeroPersonasElegidas++;
 	            }
 	            }
-	            // Si después de la pregunta sólo queda una persona, podemos asumir que esa es la elegida y terminar el juego.
 	            if (numeroPersonasElegidas == 1) {
 	            for (int i = 0; i < 10; i++) {
 	            if (persona[i] != null) {
-	            	System.out.println("La persona elegida es " + persona[i].getNombre());
+	            	System.out.println("TU ENAMORADO ES... " + persona[i].getNombre());
 	            	break;
 	            	}
 	            	}
 	            	return;
 	            	}
-	            System.out.println("Las personas que cumplen con la característica son: ");
+	            System.out.println("SOLO ELLOS CUMPLEN CON EL PERFIL: ");
 	            for (int i = 0; i < 10; i++) {
 	            if (persona[i] != null) {
 	            System.out.println((i + 1) + ". " + persona[i].getNombre());
@@ -225,15 +222,14 @@ public class Mian1 {
 	            }
 	            System.out.println("");
 	            }
-	        System.out.println("Elige la persona que crees que es la elegida (Introduce el número de la persona):");
+	        System.out.println("QUIEN SERÁ TU ENAMORADO SECRETO..?:");
 	        int eleccionUsuario = sc.nextInt();
 	        eleccionUsuario--;
 
-	      //Comprobamos si la elección del usuario es correcta
 	        if (persona[eleccionUsuario] != null) {
-	            System.out.println("¡Correcto! La persona elegida es " + persona[eleccionUsuario].getNombre());
+	            System.out.println("¡ES ESEEEEEE! casense " + persona[eleccionUsuario].getNombre());
 	        } else {
-	            System.out.println("Incorrecto, la persona elegida no cumplía con las características");
+	            System.out.println("lo siento :c pero parece que no es ");
 	        }
 	        }
 
